@@ -1,0 +1,185 @@
+//this is a global sass file 
+
+//preparation of the Work environment the variables and ...
+
+//variables fonts :
+$font-logo: 'Allura', cursive;
+$font_family: 'Roboto', sans-serif;
+
+
+//variables colors :
+$textColor:#000;
+$bgColor:#fff;
+
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    text-decoration: none;
+}
+//the specific classes 
+.center-elements{
+    padding:0 1rem;
+
+    @media screen and (min-width:768px) {
+        padding:0 6rem;
+    }
+}
+
+//start the header specific the navbar
+
+#navbar{
+    padding-top:1rem;
+    position:absolute;
+    top:0;
+    width:100%;
+    //the gird container
+    .controle-head__container{
+        display:grid;
+        grid-template-columns: 70% 30%;
+        align-items: center;
+        cursor:pointer; 
+        //styling the logo
+        #logo{
+            font-family:$font-logo;
+            font-size:2.5rem;
+            text-transform: capitalize;
+            color:$textColor;
+        }
+
+        //styling the bar icon
+        #bar_icon{
+            width:2rem;
+            height:2rem;
+            justify-self: end;  
+            display: flex;
+            flex-direction: column;
+            justify-content: center;     
+            div{
+                width:100%;
+                height:1px;
+                background:$textColor;
+                margin-bottom: 0.5rem;
+                
+                &:last-child{
+                    margin:0;
+                }
+            }
+            @media screen and (min-width:768px) {
+                display:none;
+            }
+        }
+    }
+    //start the list links
+    .global-links__container{
+        display:none;
+        .links-list__container{
+            overflow:hidden;
+            display:grid;
+            grid-template-rows: 80% 20%;
+            ul{
+                list-style:none;
+                li a{
+                    text-decoration: none;
+                    color:$textColor;
+                }
+            }
+            .website-links{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                font-size:1.8rem;
+                font-family:$font_family;
+                font-weight: 300;
+                @media screen and (min-width:768px) {
+                    font-size:1.2rem;
+                    font-weight: 300;
+                }
+            }
+      
+            .social-links{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                ul{
+                    display:flex;
+                    gap:2rem;
+                    justify-content: center;
+                    font-size:1.4rem;
+                    @media screen and (min-width:768px) {
+                        font-size:1rem;
+                        gap:1rem;
+                    }
+                }
+            }
+            @media screen and (min-width:768px) {
+                display: flex;
+                justify-content: end;
+                gap: 1rem;
+                height: 100%;
+            }
+          }
+          @media screen and (min-width:768px) {
+            display:block;
+        }
+    }
+
+
+    @media screen and (min-width:768px) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+//start the hero section 
+
+.herosection{
+    width:100%;
+    height:100vh;
+    background:url(../images/herosection-image.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+
+// start the about section 
+#about{
+     padding:2rem 1rem;
+     display:grid;
+     grid-template-columns: 50% 50%;
+    .text-about__container{
+        padding-bottom:1.8rem;
+        h1{
+            font-family: $font-logo;
+            font-weight: 900;
+            font-size:4rem;
+            text-transform: capitalize;
+            margin:2rem 0;
+            @media screen and (min-width:768px) {
+                font-size:8rem;
+                margin-top:10rem;
+            }        
+        }
+        p{
+            font-family: $font_family;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: .05em;
+            text-transform: none;
+            line-height: 2rem;
+            font-size: calc((1 - 1) * 1.2vh + 1rem);
+        }
+    }
+    .image-about__container{
+     img{
+         max-width:100%;
+         max-height:100%;
+     }
+    }
+
+    @media screen and (min-width:768px) {
+        padding:2rem 16rem;
+    }
+
+}
