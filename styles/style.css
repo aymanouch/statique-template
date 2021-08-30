@@ -14,6 +14,32 @@
   }
 }
 
+.logo-title {
+  font-family: "Allura", cursive;
+  font-weight: 900;
+  font-size: 4rem;
+  text-transform: capitalize;
+  margin: 2rem 0;
+}
+@media screen and (min-width: 768px) {
+  .logo-title {
+    font-size: 8rem;
+    margin-top: 10rem;
+  }
+}
+
+.list-list__ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  justify-content: center;
+}
+.list-list__ul a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
 #navbar {
   padding-top: 1rem;
   position: absolute;
@@ -131,8 +157,6 @@
 
 #about {
   padding: 2rem 1rem;
-  display: grid;
-  grid-template-columns: 50% 50%;
 }
 #about .text-about__container {
   padding-bottom: 1.8rem;
@@ -166,7 +190,74 @@
 @media screen and (min-width: 768px) {
   #about {
     padding: 2rem 16rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 2rem;
   }
+}
+
+.sections {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.sections.box-01 {
+  background-image: url(../images/img-01.jpg);
+}
+.sections.box-02 {
+  background-image: url(../images/img-02.jpg);
+}
+.sections.box-03 {
+  background-image: url(../images/img-03.jpg);
+}
+.sections.box-04 {
+  background-image: url(../images/img-04.jpg);
+}
+.sections .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+.sections .text-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.sections .text-section h2 a {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+footer {
+  padding: 2rem 0;
+  background: #000;
+}
+footer h1 {
+  text-align: center;
+  color: #fff;
+}
+footer .list-list__ul a {
+  color: #fff;
+}
+footer .copyright {
+  text-align: center;
+  color: #fff;
+  margin: 2rem 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=style.css.map */
